@@ -108,6 +108,11 @@ Linting is done using [ESLint](https://eslint.org/).
 
 In this app, ESLint is configured to follow the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) with some modifications.
 
+To run the linter:
+```
+yarn run lint
+```
+
 ## License
 
 [MIT](LICENSE)
