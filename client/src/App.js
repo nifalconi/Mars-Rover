@@ -29,12 +29,13 @@ function MoveRobotForm() {
     robotClient
       .post("v1/move", body)
       .then((response) => {
-        setNewPosition(response.data);
         setErrorMessage(null);
+        setNewPosition(response.data);
       })
       .catch((err) => {
-        setErrorMessage(err.response.data.message);
+        if (!err.response) return;
         setNewPosition(null);
+        setErrorMessage(err.response.data.message);
       });
   };
 
