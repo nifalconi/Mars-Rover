@@ -7,8 +7,9 @@
   "scripts": {
     "client": "node_modules/.bin/webpack-dev-server --mode development --open --hot",
     "server": "nodemon server/server.js",
-    "test:client": "jest --config ./client/jest.config.js",
-    "test:server": "jest --config ./server/jest.config.js"
+    "test:client": "jest --config ./client/jest.config.js --coverage",
+    "test:server": "jest --config ./server/jest.config.js --coverage",
+    "lint": "eslint ./client ./server --ext js"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.17.0",
